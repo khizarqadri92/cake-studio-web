@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #8b5a3c;
+  --color-secondary: #f4c2c2;
+  --color-background: #fff8f0;
+  --color-surface: #ffffff;
+  --color-text: #3e2723;
+  --font-heading: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+  --radius-btn: 9999px;
+}
+
+body { @apply bg-cream font-body text-ink antialiased; }
+h1, h2, h3, h4 { @apply font-heading; }
+.cms-body h2 { @apply mt-8 mb-3 text-2xl; }
+.cms-body p, .cms-body ul, .cms-body ol { @apply mb-4 leading-relaxed; }
+.cms-body ul { @apply list-disc pl-6; }
+.cms-body ol { @apply list-decimal pl-6; }
+.cms-body a { @apply text-primary underline; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .fade-in { animation: fade-in 0.5s ease both; }
+  @keyframes fade-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+}
